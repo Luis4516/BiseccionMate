@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Método de Bisección</title>
+
+    
+
+    <link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+    crossorigin="anonymous">
+
+    <link rel="stylesheet" 
+    type="text/css" 
+    href="biseccion.css">
+</head>
+<body>
+    <div class="jumbotron">
+        <h1>Métodos númericos</h1>
+        <p>Encontrar las raíces de la función.</p>
+    </div>
+    <div class="container-fluid">
+        <div class="row-justify">
+            <form id="form" align="start">
+                <div row>
+                    <p>Función f(x)</p>
+                    <label for="eq"></label>
+                    <input  type="text" id="eq" placeholder="Ingrese aquí la función">
+                    <input type="number" id="inferior" placeholder="Xi">
+                    <input type="number" id="superior" placeholder="Xu">
+                    <input type="submit" value="Graficar función" class="btn btn-warning"/>
+                    <button id="calcular" type="button" class="btn btn-primary">Calcular corte</button>
+                </div>
+            </form>
+            <div id="plot"></div>
+            <div class="col-md-8">
+                <table id="proceso" class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col-1">Iteración</th>
+                            <th scope="col-3">Xi</th>
+                            <th scope="col-3">Xu</th>
+                            <th scope="col-3">Aproximación</th>
+                            <th scope="col-3">f(x)</th>
+                            <th scope="col-1">Error Relativo A.</th>
+                          </tr>
+                        </thead>
+                </table>
+            </div>
+        </div>
+        <script src="./main.js" type="module"></script>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" 
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" 
+        crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+        
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/mathjs/3.10.0/math.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+        <script src="https://wzrd.in/standalone/function-plot@1.14.0"></script>
+</body>
+</html>
